@@ -17,7 +17,9 @@ Email_valid = ''
 Pwrd_valid = ''
 Email_Flag = False
 Pwrd_Flag = False
-List1= []
+File = open("Assignments1.txt",'r') 
+test = File.read()
+List1 = test.split()
 
 
 # Make a regular expression
@@ -82,9 +84,7 @@ try:
         File_open.write('\n'+f'{Pwrd_valid}')
         File_open.close
     
-    File = open("Assignments1.txt",'r') 
-    test = File.read()
-    List1 = test.split()
+
 except:
     print("Please enter value between 1 & 3")
     quit()
